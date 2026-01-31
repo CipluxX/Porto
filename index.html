@@ -425,13 +425,22 @@
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             animation: avatarPulse 4s ease-in-out infinite;
             overflow: hidden;
+            position: relative;
         }
 
         .profile-avatar img {
-            width: 100%;
-            height: 100%;
+            width: 196px;
+            height: 196px;
             object-fit: cover;
             display: block;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+        .profile-avatar .avatar-placeholder {
+            font-size: 5rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
         }
 
         @keyframes avatarPulse {
@@ -776,7 +785,7 @@
 
         .contact-card {
             background: var(--card-bg);
-            padding: 30px;
+            padding: 30px 20px;
             border: 1px solid rgba(0, 255, 247, 0.1);
             transition: all 0.3s ease;
             text-decoration: none;
@@ -785,8 +794,6 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
         }
 
         .contact-card:hover {
@@ -804,17 +811,17 @@
         .contact-card h4 {
             font-family: 'Orbitron', sans-serif;
             font-size: 1rem;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             color: var(--neon-cyan);
-            word-wrap: break-word;
         }
 
         .contact-card p {
             color: rgba(255, 255, 255, 0.6);
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             word-wrap: break-word;
             overflow-wrap: break-word;
             max-width: 100%;
+            line-height: 1.4;
         }
 
         /* Footer */
@@ -943,6 +950,11 @@
                 height: 150px;
             }
 
+            .profile-avatar img {
+                width: 146px;
+                height: 146px;
+            }
+
             .profile-info h3 {
                 font-size: 1.2rem;
             }
@@ -1043,7 +1055,7 @@
             }
 
             .contact-card {
-                padding: 20px;
+                padding: 20px 15px;
                 max-width: 100%;
             }
 
@@ -1057,7 +1069,7 @@
             }
 
             .contact-card p {
-                font-size: 0.8rem;
+                font-size: 0.7rem;
             }
 
             .contact-intro {
@@ -1137,6 +1149,11 @@
                 margin-bottom: 15px;
             }
 
+            .profile-avatar img {
+                width: 116px;
+                height: 116px;
+            }
+
             .profile-info h3 {
                 font-size: 1rem;
             }
@@ -1212,7 +1229,7 @@
             }
 
             .contact-card p {
-                font-size: 0.75rem;
+                font-size: 0.65rem;
             }
 
             footer {
@@ -1288,7 +1305,8 @@
         <div class="about-container">
             <div class="profile-card">
                 <div class="profile-avatar">
-                    <img src="21120122140121-82f8a12e-b5e3-4c08-951d-99c3fe33d7f0.jpg" alt="Muhammad Azhar Renaldi">
+                    <img src="21120122140121-82f8a12e-b5e3-4c08-951d-99c3fe33d7f0.jpg" alt="Muhammad Azhar Renaldi" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="avatar-placeholder" style="display: none;">MAR</div>
                 </div>
                 <div class="profile-info">
                     <h3>Muhammad Azhar Renaldi</h3>
@@ -1453,7 +1471,7 @@
             <div class="timeline-item">
                 <div class="timeline-content">
                     <div class="timeline-date">Aug 2022 - Present</div>
-                    <h3>Bachelor’s Degree in Computer Engineering</h3>
+                    <h3>Bachelor's Degree in Computer Engineering</h3>
                     <h4>Diponegoro University, Semarang</h4>
                     <p>IPK 3.80/4.00</p>
                 </div>
@@ -1527,17 +1545,17 @@
                 <a href="mailto:aldiangga150@gmail.com" class="contact-card">
                     <span class="icon">📧</span>
                     <h4>Email</h4>
-                    <p>aldiangga150@gmail.com</p>
+                    <p>aldiangga150@<br>gmail.com</p>
                 </a>
                 <a href="https://www.linkedin.com/in/azharrenaldi/" target="_blank" class="contact-card">
                     <span class="icon">💼</span>
                     <h4>LinkedIn</h4>
-                    <p>linkedin.com/in/azharrenaldi</p>
+                    <p>/in/azharrenaldi</p>
                 </a>
                 <a href="https://github.com/CipluxX" target="_blank" class="contact-card">
                     <span class="icon">💻</span>
                     <h4>GitHub</h4>
-                    <p>github.com/CipluxX</p>
+                    <p>github.com/<br>CipluxX</p>
                 </a>
                 <a href="tel:+6285179800417" class="contact-card">
                     <span class="icon">📱</span>
